@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+<body>
+  <button onclick="
+  mySubscribeButton();
+  ">Subscribe</button>
+  <button class="js-sharebutton" onclick="
+  myShareButton();
+  ">Share</button>
+  <Script>
+    
+    function mySubscribeButton(){
+      document.querySelector('button').innerHTML='Subscribed';
+    }
+    function myShareButton(){
+      document.querySelector('.js-sharebutton').innerHTML='permission Denied';
+    }
+  
+    
+
+    console.log('bazra'.length);
+    console.log('bazra'.charAt(1));
+    console.log('bazra'.trim());
+    console.log('bazra'.toUpperCase());
+    console.log('bazra'.toLowerCase());
+    const object1={
+      message:'hello'
+    };
+    const object2=object1;
+    console.log(object1.message);
+    object1.message='You are soo Good';
+    console.log(object1.message);
+    console.log(object2);
+    console.log(object2.message);
+
+    // if(object1===object2){
+      
+    // }
+    const object3={
+      message:'You are so Good'
+    }
+    console.log(object3.message);
+    // if(object1===object3){
+    //   console.log('matched by value');
+    // }else{
+    //   console.log('doesnot matched');
+    // }
+    const object4={
+      message:'You are so Good',
+      price:660
+    }
+    // console.log(object4.message);
+    // const message=object4.message;
+    // console.log(message);
+    const {message,price}=object4;//shorcuts if the object have same property and the  variable to  store it as well 
+    console.log(message);
+    console.log(price);
+
+    const object5={
+      message:message,
+      price:price,
+      message,
+      method: function function1(){
+        console.log('method');
+      }
+    };
+    console.log(object5);
+    object5.method();
+    method()
+    {
+      console.log('method');
+    }
+
+    console.log(object5.message);
+    console.log(object5.price);
+
+  </Script>
+</body> 
+</html>

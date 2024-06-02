@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>More_about_OBJECT</title>
+</head>
+<body>
+  <p>if we want to store value so that while refreshing privious data was not gone </p>
+  <Script>
+    const shoppingList={
+      vegis:'5kg',
+      fruits:{
+        apple:'10kg',
+        mango:'15kg',
+        banana:'20kg',
+        pinaple:'2pics'
+      },
+      meat:'buff',
+      dress:{
+        tshirt:12,
+        pant:15,
+        tie:5,
+        shoes:10,
+      },
+      fun:function myFunction(){
+        console.log("This is my list");
+      }
+    };
+    console.log(typeof shoppingList);
+    const toShowType=shoppingList.fun();
+    console.log(shoppingList.fruits.banana);
+    console.log(shoppingList.dress.pant);
+    const stringObject=JSON.stringify(shoppingList);
+    console.log(typeof stringObject);
+    console.log(stringObject);
+    const objectOnly=JSON.parse(stringObject);
+    console.log(typeof objectOnly);
+    console.log(objectOnly);
+    
+
+
+
+  </Script>
+</body>
+</html>

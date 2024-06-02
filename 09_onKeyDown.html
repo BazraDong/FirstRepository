@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Shipping Calculation</title>
+  <style>
+    .subscribe-button{
+      border:none;
+      background-color:black;
+      color:white;
+      border-radius:50px;
+      margin:2px;
+      padding:10px 10px;
+      font-weight: bold;
+      font-family:'Times New Roman', Times, serif;
+      cursor:pointer;
+    }
+    .is-subscribed{
+      border:none;
+      background-color:rgb(21, 175, 7);
+      color:white;
+      border-radius:50px;
+      margin:2px;
+      padding:10px 10px;
+      font-weight: bold;
+      font-family:'Times New Roman', Times, serif;
+      cursor:pointer;
+      
+    }
+ 
+      
+    
+    .js-calculate-button{
+      border:none;
+      background-color:rgb(40, 142, 8);
+      color:white;
+      border-radius:40px;
+      margin:2px;
+      padding:10px 10px;
+      font-weight: bolder;
+      font-family:'Times New Roman', Times, serif;
+      cursor: pointer;
+    }
+
+    .cost-input{
+      font-size:15px;
+      padding:10px 10px 10px 10px ;
+    }
+
+  </style>
+</head>
+<body>
+  <p>YouTube Subscribe button</p>
+  <button class="js-button subscribe-button" onclick="
+  mySubscribeButton();
+  
+  ">Subscribe</button>
+
+  <p>Amazon Shipping Calculator</p>
+  <p>Orders under $40 = +$10 Shpping Cost</p>
+  <p>Orders Over $40= FREE Shipping</p>
+  <input type="text" class="js-cost-input cost-input" placeholder="Cost of order" onkeydown="
+  handleMyKeyDown(event);
+  "
+  >
+  <button onclick="
+  calculateTotal();
+  // var values = document.querySelector('.calArea').value;
+  // myCalculation(values);
+  
+  " class="js-calculate-button">Calculate</button>
+  <p class="js-total-cost"></p>
+  <script>
+
+    function mySubscribeButton() 
+    {
+            const buttonElement=document.querySelector('.js-button');
+        if(buttonElement.innerHTML==='Subscribe'){
+          buttonElement.innerHTML='Subscribed';
+          buttonElement.classList.add('is-subscribed');
+         
+        }else{
+          buttonElement.innerHTML='Subscribe';
+          buttonElement.classList.remove('is-subscribed');
+        }
+    }
+    
+    function handleMyKeyDown(event){
+          if (event.key === 'Enter') {
+      calculateTotal();
+      }
+
+    }
+    function calculateTotal()
+    {
+     const inputElement=document.querySelector('.js-cost-input');
+     let cost=Number(inputElement.value);
+
+     if(cost<40){
+      cost+=10;
+     }
+
+     document.querySelector('.js-total-cost').innerHTML=`$${cost}`;
+    }
+    // var calArea = document.querySelector(".calArea");
+
+    // function myFunction(){
+    
+    //   if(value<40){
+    //     const result=value + 10;
+    //     document.querySelector('.calArea').innerHTML=result;
+    //   }else{
+    //     const result=value;
+    //     document.querySelector('.calArea').innerHTML=result;
+    //   }
+    // }
+  </script>
+  
+  
+</body>
+</html>

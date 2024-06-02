@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>First Project </title>
+  <style>
+    .l1{
+      background-color:green;
+      border:none;
+      border-radius:10px;
+      color:white;
+      padding:5px;
+    }
+
+  </style>
+</head>
+<body>
+  <P id="d1">My Cart :</P>
+  <button class="l1" onclick="console.log(`Cart Quantity: ${cartQuantity}`);">Show Quantity</button>
+
+  <button class="l1" onclick="document.getElementById('d1').innerHTML=`My Cart :${cartQuantity}`">display</button>
+
+  <button class="l1" onclick="
+  cartQuantity=cartQuantity+1;
+  console.log(`Cart Quantity:${cartQuantity}`);">Add to cart</button>
+  <button class="l1" onclick="
+  cartQuantity=cartQuantity+2;
+  console.log(`cart Quantity: ${cartQuantity}`);
+  ">+2</button>
+  <button class="l1" onclick="
+  cartQuantity=cartQuantity+3;
+  console.log(`cart Quantity:${cartQuantity}`);
+  ">+3</button>
+  <button class="l1" onclick="
+  cartQuantity=0;
+  console.log(`cart Quantity: ${cartQuantity}`);
+  
+  ">Rest Cart</button>
+
+  
+  <script>
+    let cartQuantity=0;
+
+  </script>
+  
+</body>
+</html>
